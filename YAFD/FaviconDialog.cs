@@ -150,13 +150,13 @@ namespace YetAnotherFaviconDownloader
                                                 var pwCustomIconType = icons[i].GetType();
 
                                                 // Name the icon
-                                                var nameProperty = pwCustomIconType.GetProperty("Name");
-                                                if (nameProperty != null)
-                                                {
-                                                    // Since the URL was valid, we just force a valid scheme prefix to be able to get the Host
-                                                    var host = fd.GetValidHost(url);
-                                                    nameProperty.SetValue(icons[i], "yafd-" + host);
-                                                }
+                                                // var nameProperty = pwCustomIconType.GetProperty("Name");
+                                                // if (nameProperty != null)
+                                                // {
+                                                //     // Since the URL was valid, we just force a valid scheme prefix to be able to get the Host
+                                                //     var host = fd.GetValidHost(url);
+                                                //     nameProperty.SetValue(icons[i], "yafd-" + host);
+                                                // }
 
                                                 // Update last modification time
                                                 var lastModificationTimeProperty = pwCustomIconType.GetProperty("LastModificationTime");
